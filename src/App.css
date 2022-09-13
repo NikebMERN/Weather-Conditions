@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 100.4 ease-in;
+}
+
+body {
+    font-family: "Outfit", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.app.warn {
+    content: "";
+    background: url("./asset/warm-bg.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* z-index: 0; */
+}
+
+.app.cold {
+    content: "";
+    background: url("./asset/cold-bg.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* z-index: 0; */
+}
+
+.app {
+    background-image: url('./asset/sunset.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+::placeholder {
+    color: #f8f8f8;
+}
+
+/* .ss > button {
+    background-color: black;
+    border: none;
+    margin-left: 20px;
+    padding: 20px 50px;
+    border-radius: 30px;
+    color: white;
+} */
+
+.search-box {
+    width: 100%;
+    /* margin: 0 100px 75px; */
+}
+
+.search-box .search-bar {
+    display: block;
+    /* padding-left: 50px; */
+    /* width: 100%; */
+    padding: 15px;
+
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    background-color: rgba(0, 0, 0, 0.096);
+    border-radius: 0px 0px 16px 16px;
+    margin-top: -1px;
+
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+    color: #ffffff;
+    font-size: 20px;
+
+    transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+    background-color: rgba(71, 64, 64, 0.75);
+}
+
+.location-box {
+    margin-top: 40px;
+}
+
+.location-box .location {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+    text-align: center;
+}
+
+.weather-box .temp {
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+    padding: 15px 25px;
+
+    color: #FFF;
+    font-size: 102px;
+    font-weight: 900;
+
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
