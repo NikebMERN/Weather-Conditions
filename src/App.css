@@ -153,3 +153,22 @@ h1 {
     font-weight: 700;
     text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
+
+.app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255, 0.2);
+}
+
+.flex .wind {
+    margin: 0 20px;
+}
+
+.flex .far {
+    margin-right: 20px;
+}

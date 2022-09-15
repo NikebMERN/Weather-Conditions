@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 const api = {
   base: "https://api.openweathermap.org/data/2.5/",
-  key: "b9b798f06f7fee290d8ab251701346ad"
+  key: process.env.REACT_APP_apikey
 }
 
 function App() {
@@ -32,6 +32,20 @@ function App() {
   
       return `${day} ${date}, ${month} ${year}`
     }
+
+    const kelvin = (el) => {
+      let ul;
+      ul = el + 273;
+
+      return ul;
+    }
+
+    const farhanit = (rr) => {
+      let ror;
+      ror = (rr * (9/5)) + 32;
+
+      return ror;
+    }
   
     return (
       <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 18.14) ? 'app warn' : 'app cold') : 'app'}>
@@ -49,7 +63,9 @@ function App() {
           {(typeof weather.main != "undefined") ? (
           <>
             <div className="location-box">
-              <div className="location">{weather.name}, {weather.sys.country}</div>
+              <div className="location">
+                <p>{weather.name}, {weather.sys.country}</p>
+              </div>
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
@@ -57,6 +73,21 @@ function App() {
                 {weather.main.temp}°c
               </div>
               <div className="weather">{weather.weather[0].main}</div>
+              <div className='flex'>
+                        <div className="humidity temp">
+            <p className='bold'><p>Humidity</p>: {weather.main.humidity}%</p>
+            </div>
+            <div className="wind temp">
+              <p className='bold'><p>Wind Speed</p>: {weather.wind.speed.toFixed()} MPH</p>
+            </div>
+            <div className="far temp">
+              <p className='bold'><p>Farhaneite</p>: {farhanit(weather.main.temp)}°F</p>
+            </div>
+            <div className="kelvin temp">
+              <p className='bold'><p>Kelvine</p>: {kelvin(weather.main.temp)}K</p>
+            </div>
+              </div>
+    
             </div>
           </>
           ) : (<center><h1>No Result Found</h1></center>)}
